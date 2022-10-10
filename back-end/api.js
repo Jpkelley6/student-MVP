@@ -29,9 +29,21 @@ app.get('/api/meals', (req, res, next) => {
     .then(results => res.send(results.rows))
 })
 
+app.get('/api/meals/BBQ', (req, res, next) => {
+    client.query("SELECT * FROM meals WHERE meals.meal_type = 'BBQ'")
+    .then(results => 
+        results.rows.length === 0 ? res.send(next()) :
+        res.send(results.rows))
+})
 
+app.get('/api/meals/takeOut', (req, res, next) => {
+    client.query("SELECT * FROM meals WHERE meals.meal_type = 'Take-out'")
+    .then(results => 
+        results.rows.length === 0 ? res.send(next()) :
+        res.send(results.rows))
+})
 
 //port listening
 app.listen(PORT ,()=> {
     console.log('Server is running', PORT)
-    })
+})

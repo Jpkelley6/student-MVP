@@ -3,7 +3,7 @@ DROP TABLE IF EXISTS meals;
 CREATE TABLE meals (
  meal_id serial ,
  meal_name varchar(40),
- meal_type varchar(40), 
+ meal_type varchar(40),
  meal_description text
 );
 
