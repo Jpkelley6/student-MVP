@@ -1,25 +1,15 @@
-//importing express
 const express = require('express')
-//invoking express
 const app = express()
-//importing pg
 const { Client } = require('pg')
-//connection string
-const connectionString = 'postgresql://postgres:docker@127.0.0.1:5432/meals'
-//connection string connection 
+const config = require('./config.js')[process.env.NODE_ENV || 'dev']
 const client = new Client({
-    connectionString: connectionString
+    connectionString: config.connectionString
 })
-//connect the client 
 client.connect()
-//using express.json
 app.use(express.json())
-// importing cors 
 const cors = require('cors')
-//using cors
 app.use(cors())
-// our port
-const PORT = process.env.PORT || 3000
+const PORT = config.port
 const { response } = require('express')
 
 app.get('/api/meals', (req, res, next) => {
