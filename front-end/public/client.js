@@ -120,6 +120,7 @@ function addMeal() {
    }
    fetch("http://localhost:3000/api/meals/meals", {
       method: 'POST',
+      mode: 'cors',
       headers: {
          'Content-Type': 'application/json'
       },
@@ -146,6 +147,7 @@ function addUserChoice() {
    }
    fetch("http://localhost:3000/api/meals/users", {
       method: 'POST',
+      mode: 'cors',
       headers: {
          'Content-Type': 'application/json'
       },
