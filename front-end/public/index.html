@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <script defer src="client.js"></script>
-        <link rel="stylesheet" href="style.css">
-        <title>Document</title>
-    </head>
-    <body>
-        <h1 id="header">Welcome to Friday Night at Mr. Jeff, Second of His Name, first of the dependents, JJ's House!</h1>
-        <div class="search" id="searchButton">
-            <button id="all">Click Here for List of All Items!</button>
-            <button id="BBQ">Click Here for List of BBQ Items!</button>
-            <button id="takeOut">Click Here for List of Take-out Items!</button>
-        </div>
-        <div class="results" id="searchResults">
-        </div>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="client.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Franklin&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="header">
+      Welcome to Friday Night at Mr. Jeff, Second of His Name, First of the
+      Dependents, JJ's House!
+    </h1>
+    <div class="search" id="searchButton">
+      <button id="all">Click here for list of all meals</button>
+      <button id="BBQ">Click here for list of BBQ meals</button>
+      <button id="takeOut">Click here for list of take-out meals</button>
+    </div>
+    <div class="results" id="searchResults"></div>
+    <div class="moreButtons" id="submitButton">
+      <input placeholder="New meal name here" id="newMealName" />
+      <input placeholder="New meal type here" id="newMealType" />
+      <input placeholder="New meal description here" id="NewMealDesc" />
+      <button id="newItem">Add a menu item</button>
+    </div>
+    <div class="userSelectButtons" id="userSelectButton">
+      <input placeholder="Name" id="userName" />
+      <input placeholder="Meal Number" id="mealNumber" />
+      <button id="userSelect">Choose your meal!</button>
+    </div>
+    <div class="userSelectButtons" id="userSelectButton">
+      <button id="userChoice">Show all guest choices</button>
+    </div>
+  </body>
 </html>

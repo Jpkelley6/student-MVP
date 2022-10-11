@@ -1,15 +1,121 @@
+body{
+    background-image: url('Grill.jpg') ;
+    background-size: cover;
+    font-family: 'Libre Franklin', sans-serif;
+}
+
+button {
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 5px;
+}
+
+input{
+    font-family: 'Libre Franklin', sans-serif;
+    margin: 5px;
+}
+
 div{
     text-align: center;
     margin: 20px;
 }
 
 h1{ 
-    font-size: 30PX;
+    font-size: 40PX;
     width: 1000px;
     margin: auto;
     text-align: center;
+    background-color: rgba(240, 248, 255, 0.659);
+    border-radius: 10px;
+    border-style: solid;
+    border-color: black;
+    padding: 15px;
   }
 
 #searchButton{
     text-align: center;
 }
+
+#searchResults{
+    background-color: rgba(240, 248, 255, 0.812);
+    width: 800px;
+    text-align: center;
+    font-size: larger;
+    margin: auto;
+    border-radius: 15px;
+    border-style: solid;
+    border-color: black;
+    display: none;
+}
+
+#all{
+    height: 50px;
+    width: 260px;
+    border-radius: 15px;
+    transition: .1s;
+}
+
+#all:hover{
+    scale: 1.07;
+ }
+
+#BBQ{
+    height: 50px;
+    width: 260px;
+    border-radius: 15px;
+    transition: .1s;
+}
+
+#BBQ:hover{
+    scale: 1.07;
+ }
+
+#takeOut{
+    height: 50px;
+    width: 260px;
+    border-radius: 15px;
+    transition: .1s;
+}
+
+#takeOut:hover{
+    scale: 1.07;
+ }
+
+ input{
+    height: 40px;
+    width: 180px;
+    border-radius: 10px;
+    text-align: center;
+ }
+
+ #newItem{
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    transition: .1s;
+ }
+
+ #newItem:hover{
+    scale: 1.07;
+ }
+
+ #userSelect{
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    transition: .1s;
+ }
+
+ #userSelect:hover{
+    scale: 1.07;
+ }
+
+ #userChoice{
+    height: 40px;
+    width: 180px;
+    border-radius: 15px;
+    transition: .1s;
+ }
+
+ #userChoice:hover{
+    scale: 1.07;
+ }

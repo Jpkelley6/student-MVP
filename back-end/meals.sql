@@ -1,7 +1,8 @@
-DROP TABLE IF EXISTS meals;
+DROP TABLE IF EXISTS meals CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
 CREATE TABLE meals (
- meal_id serial ,
+ meal_id serial PRIMARY KEY,
  meal_name varchar(40),
  meal_type varchar(40),
  meal_description text
@@ -14,3 +15,14 @@ INSERT INTO meals (meal_name, meal_type, meal_description) VALUES
 ('Pizza and breadsticks', 'Take-out', 'Pizza with your choice of toppins ordered from the local town pizza spot'),
 ('Chicken stir-fry and rice', 'Take-out', 'Chicken stir fry combo with white or fried rice and egg roll from the #1 chinese restaurant in town'),
 ('Tikka masala with Garlic Naan bread', 'Take-out', 'Tikka masala sauce with your choice of meat, rice, and a side of garlic naan bread from the local Indian restaurant');
+
+CREATE TABLE users (
+ users_id serial,
+ users_name varchar(40),
+ meal_id int,
+ PRIMARY KEY (users_id),
+ CONSTRAINT fk_meals
+    FOREIGN KEY(meal_id)
+        REFERENCES meals(meal_id)
+        ON DELETE CASCADE
+);
