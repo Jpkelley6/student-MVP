@@ -24,7 +24,7 @@ let devURL = 'http://127.0.0.1:3000/api/'
 function all() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch(`${devURL}meals`)
+   fetch(`${URL}meals`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -45,7 +45,7 @@ function all() {
 function getBBQ() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch(`${devURL}meals/BBQ`)
+   fetch(`${URL}meals/BBQ`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -66,7 +66,7 @@ function getBBQ() {
 function getAllChoices() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch(`${devURL}meals/usersChoices`)
+   fetch(`${URL}meals/usersChoices`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -90,7 +90,7 @@ function getAllChoices() {
 function getTakeOut() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch(`${devURL}meals/takeOut`)
+   fetch(`${URL}meals/takeOut`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -121,7 +121,7 @@ function addMeal() {
       alert('Please fill in a fields')
       return
    }
-   fetch(`${devURL}meals/meals`, {
+   fetch(`${URL}meals/meals`, {
       method: 'POST',
       mode: 'cors',
       headers: {
