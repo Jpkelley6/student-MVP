@@ -148,7 +148,7 @@ function addUserChoice() {
       alert('Please fill in a fields')
       return
    }
-   fetch(`${devURL}meals/users`, {
+   fetch(`${URL}meals/users`, {
       method: 'POST',
       mode: 'cors',
       headers: {
