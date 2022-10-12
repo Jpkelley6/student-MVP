@@ -18,10 +18,13 @@ addUserButton.addEventListener('click', addUserChoice)
 let UserChoiceButton = document.getElementById('userChoice')
 UserChoiceButton.addEventListener('click', getAllChoices)
 
+let URL = 'https://bbq-meal-builder.onrender.com/api/'
+let devURL = 'http://127.0.0.1:3000/api/'
+
 function all() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch('http://127.0.0.1:3000/api/meals')
+   fetch(`${devURL}meals`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -42,7 +45,7 @@ function all() {
 function getBBQ() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch('http://127.0.0.1:3000/api/meals/BBQ')
+   fetch(`${devURL}meals/BBQ`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -63,7 +66,7 @@ function getBBQ() {
 function getAllChoices() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch('http://127.0.0.1:3000/api/meals/usersChoices')
+   fetch(`${devURL}meals/usersChoices`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -87,7 +90,7 @@ function getAllChoices() {
 function getTakeOut() {
    resultsDiv.innerHTML = ''
    resultsDiv.style.display = 'block'
-   fetch('http://127.0.0.1:3000/api/meals/takeOut')
+   fetch(`${devURL}meals/takeOut`)
       .then(response => response.json())
       .then(data => {
          let mealObj;
@@ -118,7 +121,7 @@ function addMeal() {
       alert('Please fill in a fields')
       return
    }
-   fetch("http://localhost:3000/api/meals/meals", {
+   fetch(`${devURL}meals/meals`, {
       method: 'POST',
       mode: 'cors',
       headers: {
@@ -145,7 +148,7 @@ function addUserChoice() {
       alert('Please fill in a fields')
       return
    }
-   fetch("http://localhost:3000/api/meals/users", {
+   fetch(`${devURL}meals/users`, {
       method: 'POST',
       mode: 'cors',
       headers: {
